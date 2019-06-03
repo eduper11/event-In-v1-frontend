@@ -31,7 +31,7 @@ export class LoginComponent {
         () => {
           this.userService.getUserProfile().subscribe();
           console.log(this.authService.login, this.userService);
-          this.router.navigate(['/event']);
+          // this.router.navigate(['/event']);
         },
         () => this.loginForm.get('password').setValue('')
       );

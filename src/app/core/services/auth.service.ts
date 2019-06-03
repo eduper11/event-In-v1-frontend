@@ -25,11 +25,18 @@ export class AuthService {
         })
       );
   }
-  register({ fullName, email, password }) {
+  register({ full_name, email, password }) {
     return this.http.post(`${environment.apiBaseUrl}/account`, {
-      fullName,
+      full_name,
       email,
       password
     });
+  }
+
+  logout() {
+    localStorage.removeItem('auth');
+    this.authInfo = null;
+    this.router.navigate(['/welcome']);
+    // location.href = '/welcome'; -> Asegura borrado de datos de los servicios
   }
 }

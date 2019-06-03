@@ -14,3 +14,8 @@ export interface User {
   instagram: string;
   description: string;
 }
+
+export interface Error {
+  message: string;
+  status: number;
+}
