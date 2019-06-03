@@ -1,22 +1,21 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { environment } from 'src/environments/environment';
-import { HttpClient } from '@angular/common/http';
 import { AuthService } from 'src/app/core/services/auth.service';
-import { MatchPasswordValidator } from '../../validators/match-password.validator';
 import { ModalService } from 'src/app/core/services/modal.service';
+import { MatchPasswordValidator } from 'src/app/shared/validators/match-password.validator';
+import { RegisterModalService } from 'src/app/core/services/register-modal.service';
 
 @Component({
-  selector: 'sn-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss']
+  selector: 'sn-register-modal',
+  templateUrl: './register-modal.component.html',
+  styleUrls: ['./register-modal.component.scss']
 })
-export class RegisterComponent {
+export class RegisterModalComponent {
   registerForm = this.fb.group(
     {
       fullName: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(7)]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', [Validators.required]]
     },
     { validators: MatchPasswordValidator }
@@ -25,7 +24,8 @@ export class RegisterComponent {
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
-    private modalService: ModalService
+    private modalService: ModalService,
+    public registerModalService: RegisterModalService
   ) {}
 
   register() {

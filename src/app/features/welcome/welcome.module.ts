@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { WelcomeHeroComponent } from './welcome-form/welcome-form.component';
+import { WelcomeFormComponent } from './welcome-form/welcome-form.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { LayoutModule } from 'src/app/layout/layout.module';
 
@@ -14,7 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [WelcomeComponent, WelcomeHeroComponent],
+  declarations: [WelcomeComponent, WelcomeFormComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
