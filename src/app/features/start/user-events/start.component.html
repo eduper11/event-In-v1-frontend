@@ -1,0 +1,30 @@
+<div class="container-fluid bg-light h-100">
+  <div class="row justify-content-center pt-2 pb-2">
+    <button type="button" class="btn btn-primary ml-2 mr-2">
+      Join to a new event
+    </button>
+    <button type="button" class="btn btn-primary">Create new event</button>
+  </div>
+  <section class="pt-4">
+    <h1 class="text-center pb-3">
+      Or select one of the events you have joined...
+    </h1>
+  </section>
+  <div class="row justify-content-center">
+    <div
+      class="col-12 col-lg-7 pb-3"
+      *ngFor="let event of myEventsService.events"
+    >
+      <div class="card bg-light text-black animated bounceIn border-primary">
+        <div class="card-header p-2 bg-primary">
+          <h5 class="text-center">{{ event.name }}</h5>
+        </div>
+        <div class="card-body p-2">
+          <p class="m-0">Company: {{ event.company }}</p>
+          <p class="m-0">Event created at: {{ event.created_at }}</p>
+          <p class="m-0">Event finish at: {{ event.finish_at }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,13 +5,15 @@ import { ValidationMessagesComponent } from './components/validation-messages/va
 import { MarkAsTouchedDirective } from './directives/mark-as-touched.directive';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterModalComponent } from './components/register/register-modal.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     LoginComponent,
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
-    RegisterModalComponent
+    RegisterModalComponent,
+    NotFoundComponent
   ],
   imports: [CommonModule, ReactiveFormsModule],
   exports: [
