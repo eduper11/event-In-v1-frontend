@@ -6,6 +6,7 @@ import { MarkAsTouchedDirective } from './directives/mark-as-touched.directive';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterModalComponent } from './components/register/register-modal.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { CreateEventComponent } from './components/create-event/create-event.component';
 
 @NgModule({
   declarations: [
@@ -13,14 +14,16 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
     RegisterModalComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CreateEventComponent
   ],
   imports: [CommonModule, ReactiveFormsModule],
   exports: [
     LoginComponent,
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
-    RegisterModalComponent
+    RegisterModalComponent,
+    CreateEventComponent
   ]
 })
 export class SharedModule {}

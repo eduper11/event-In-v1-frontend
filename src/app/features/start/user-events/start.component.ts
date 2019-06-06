@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyEventsService } from 'src/app/core/services/myEvents.service';
+import { CreateEventService } from 'src/app/core/services/create-event.service';
 
 @Component({
   selector: 'sn-start',
@@ -7,7 +8,10 @@ import { MyEventsService } from 'src/app/core/services/myEvents.service';
   styleUrls: ['./start.component.scss']
 })
 export class StartComponent implements OnInit {
-  constructor(public myEventsService: MyEventsService) {}
+  constructor(
+    public myEventsService: MyEventsService,
+    public createEventService: CreateEventService
+  ) {}
 
   ngOnInit() {
     this.myEventsService.getMyEvents().subscribe();
