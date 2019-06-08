@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { CreateEventService } from 'src/app/core/services/create-event.service';
 import { ModalService } from 'src/app/core/services/modal.service';
+import { LIST_ITEMS_ANIMATION } from '../../animations/list.animation';
 
 @Component({
   selector: 'sn-create-event',
   templateUrl: './create-event.component.html',
-  styleUrls: ['./create-event.component.scss']
+  styleUrls: ['./create-event.component.scss'],
+  animations: [LIST_ITEMS_ANIMATION]
 })
 
 /**
