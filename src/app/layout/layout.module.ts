@@ -7,6 +7,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ToastComponent } from './toast/toast.component';
 import { ModalComponent } from './modal/modal.component';
 import { GeneralLayoutComponent } from './general-layout/general-layout.component';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { GeneralLayoutComponent } from './general-layout/general-layout.componen
     FooterComponent,
     ToastComponent,
     ModalComponent,
-    GeneralLayoutComponent
+    GeneralLayoutComponent,
+    MainLayoutComponent,
+    NavComponent
   ],
   imports: [CommonModule, RouterModule, SharedModule],
   exports: [ToastComponent, HeaderComponent, FooterComponent, ModalComponent]
