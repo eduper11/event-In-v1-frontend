@@ -33,7 +33,8 @@ export class ErrorInterceptor implements HttpInterceptor {
         ) {
           this.authService.logout();
         } else {
-          this.toastService.addToast(error.error[0]);
+          console.error(error.error);
+          this.toastService.addToast(error.error);
         }
 
         return throwError(error);

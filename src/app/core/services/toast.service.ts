@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Error } from '../core.models';
+import { Error, ToastData } from '../core.models';
 
 @Injectable({
   providedIn: 'root'
@@ -8,28 +8,28 @@ export class ToastService {
   toasts = [];
 
   addToast(toastData: ToastData | Error, delay: number = 5000) {
-    if ('message' in toastData) {
-      this.toasts.unshift(toastData);
-    } else {
-      this.toasts.unshift({
-        title: 'Error',
-        message: this.getErrorMessage(toastData),
-        variant: 'danger'
-      });
-    }
+    // console.log('1');
+    // if ('message' in toastData) {
+    //   console.log('2');
+    //   this.toasts.unshift(toastData);
+    // }
+    // else {
+    // console.log(toastData.message);
+    this.toasts.unshift({
+      title: 'Error',
+      message: toastData.message,
+      variant: 'danger'
+    });
+    // }
 
     this.delayAndRemove(delay);
   }
 
-  getErrorMessage({ message }: Error): string {
-    // if (detail) {
-    //   return detail;
-    // }
-
-    if (message) {
-      return `You ${message} is wrong`;
-    }
-  }
+  // getErrorMessage({ message }: Error): string {
+  //   if (message) {
+  //     return `You ${message} is wrong`;
+  //   }
+  // }
 
   isErrorToast(toast: ToastData) {
     if (toast.variant === 'error') {
@@ -51,10 +51,4 @@ export class ToastService {
       this.toasts.pop();
     }
   }
-}
-
-export interface ToastData {
-  title: string;
-  message: string;
-  variant: string;
 }
