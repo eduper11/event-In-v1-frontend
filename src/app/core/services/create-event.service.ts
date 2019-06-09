@@ -10,11 +10,12 @@ export class CreateEventService {
 
   constructor(private http: HttpClient) {}
 
-  createEvent({ name, company, finish_at }) {
+  createEvent({ name, company, finish_at, youtube_streaming_url }) {
     return this.http.post(`${environment.apiBaseUrl}/event`, {
       name,
       company,
-      finish_at
+      finish_at,
+      youtube_streaming_url
     });
   }
 
