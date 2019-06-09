@@ -16,6 +16,7 @@ export interface User {
 }
 
 export interface Error {
+  name: string;
   message: string;
   status: number;
 }
@@ -27,4 +28,11 @@ export interface Event {
   company: string;
   created_at: Date;
   finish_at: Date;
+  youtube_streaming_url: string;
+}
+
+export interface ToastData {
+  title: string;
+  message: string;
+  variant: string;
 }
