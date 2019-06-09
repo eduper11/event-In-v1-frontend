@@ -26,9 +26,26 @@
           <h5 class="text-center">{{ event.name }}</h5>
         </div>
         <div class="card-body p-2">
-          <p class="m-0">Company: {{ event.company }}</p>
-          <p class="m-0">Event created at: {{ event.created_at }}</p>
-          <p class="m-0">Event finish at: {{ event.finish_at }}</p>
+          <ul>
+            <li>
+              <p class="m-0">Company: {{ event.company }}</p>
+            </li>
+            <li>
+              <p class="m-0">Created at: {{ event.created_at }}</p>
+            </li>
+            <li>
+              <p class="m-0">Finish at: {{ event.finish_at }}</p>
+            </li>
+          </ul>
+          <div class="text-center">
+            <button
+              type="button"
+              class="btn btn-info"
+              (click)="getCurrentEvent(event.id)"
+            >
+              Go-In!!
+            </button>
+          </div>
         </div>
       </div>
     </div>
