@@ -8,6 +8,7 @@ import { tap } from 'rxjs/operators';
 })
 export class MyEventsService {
   events: Event[];
+  currentEvent: Event;
 
   constructor(private http: HttpClient) {}
 
@@ -17,5 +18,19 @@ export class MyEventsService {
         this.events = events;
       })
     );
+  }
+
+  getCurrentEvent(id: string) {
+    return this.http
+      .get(`${environment.apiBaseUrl}/eventbyid`, {
+        params: {
+          event_id: id
+        }
+      })
+      .pipe(
+        tap((event: Event) => {
+          this.currentEvent = event;
+        })
+      );
   }
 }
