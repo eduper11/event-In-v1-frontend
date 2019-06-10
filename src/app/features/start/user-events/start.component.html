@@ -1,55 +1,36 @@
 <div class="container-fluid bg-light h-100">
-  <div class="row justify-content-center pt-2 pb-2">
-    <button type="button" class="btn btn-primary ml-2 mr-2">
+  <div class="row justify-content-center py-2 mx-1">
+    <button
+      type="button"
+      class="col-12 col-sm-2 col-lg-2 btn btn-primary my-1"
+      (click)="[openMyEvents(), closeJoinEvent(), closeCreateEvent()]"
+    >
+      My events
+    </button>
+    <button
+      type="button"
+      class="col-12 col-sm-2 col-lg-2 btn btn-primary mx-4 my-1"
+      (click)="[openJoinEvent(), closeCreateEvent(), closeMyEvents()]"
+    >
       Join to a new event
     </button>
     <button
       type="button"
-      class="btn btn-primary"
-      (click)="createEventService.open()"
+      class="col-12 col-sm-2 col-lg-2 btn btn-primary my-1"
+      (click)="[openCreateEvent(), closeJoinEvent(), closeMyEvents()]"
     >
       Create new event
     </button>
   </div>
-  <section class="pt-4">
-    <h1 class="text-center pb-3">
-      Or select one of the events you have joined...
-    </h1>
-  </section>
+
   <div class="row justify-content-center">
-    <div
-      class="col-12 col-lg-7 pb-3"
-      *ngFor="let event of myEventsService.events"
-    >
-      <div class="card bg-light text-black animated bounceIn border-primary">
-        <div class="card-header p-2 bg-primary">
-          <h5 class="text-center">{{ event.name }}</h5>
-        </div>
-        <div class="card-body p-2">
-          <ul>
-            <li>
-              <p class="m-0">Company: {{ event.company }}</p>
-            </li>
-            <li>
-              <p class="m-0">Created at: {{ event.created_at }}</p>
-            </li>
-            <li>
-              <p class="m-0">Finish at: {{ event.finish_at }}</p>
-            </li>
-          </ul>
-          <div class="text-center">
-            <button
-              type="button"
-              class="btn btn-info"
-              (click)="getCurrentEvent(event.id)"
-            >
-              Go-In!!
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <sn-myevents
+      class="col-12 col-lg-7 mt-2"
+      *ngIf="myEventsOpened"
+    ></sn-myevents>
+    <sn-create-event
+      class="col-12 col-lg-7 mt-4 animated bounceIn"
+      *ngIf="createOpened"
+    ></sn-create-event>
   </div>
 </div>
-
-<sn-create-event></sn-create-event>

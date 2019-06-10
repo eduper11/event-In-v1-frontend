@@ -7,6 +7,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterModalComponent } from './components/register/register-modal.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CreateEventComponent } from './components/create-event/create-event.component';
+import { MembersComponent } from './components/members/members.component';
+import { LiveComponent } from './components/live/live.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { ValidationEventComponent } from './components/validation-event/validation-event.component';
+import { MyEventsComponent } from './components/myevents/myevents.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +20,12 @@ import { CreateEventComponent } from './components/create-event/create-event.com
     MarkAsTouchedDirective,
     RegisterModalComponent,
     NotFoundComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    MembersComponent,
+    LiveComponent,
+    LoaderComponent,
+    ValidationEventComponent,
+    MyEventsComponent
   ],
   imports: [CommonModule, ReactiveFormsModule],
   exports: [
@@ -23,7 +33,11 @@ import { CreateEventComponent } from './components/create-event/create-event.com
     ValidationMessagesComponent,
     MarkAsTouchedDirective,
     RegisterModalComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    LoaderComponent,
+    MembersComponent,
+    LiveComponent,
+    MyEventsComponent
   ]
 })
 export class SharedModule {}
