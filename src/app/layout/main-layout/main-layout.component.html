@@ -2,17 +2,15 @@
   <sn-header></sn-header>
   <div class="container-fluid">
     <div class="row">
-      <nav class="col-12 col-lg-3 bg-light">
+      <nav class="col-12 col-md-3 col-lg-3 bg-light">
         <hr />
         <sn-nav></sn-nav>
         <hr />
         <a class="btn btn-link" (click)="authService.logout()">Logout</a>
       </nav>
-      <main class="col-12 col-md-8 col-lg-7">
-        <router-outlet></router-outlet>
+      <main class="col-12 col-md-9 col-lg-9 p-0">
+        <router-outlet class="animated fadeInRight"></router-outlet>
       </main>
-      <!-- <aside class="col-12 col-md-4 col-lg-3">
-    </aside> -->
     </div>
   </div>
   <sn-footer></sn-footer>

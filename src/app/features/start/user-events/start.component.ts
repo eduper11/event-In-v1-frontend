@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MyEventsService } from 'src/app/core/services/myEvents.service';
+import { EventsService } from 'src/app/core/services/events.service';
 import { CreateEventService } from 'src/app/core/services/create-event.service';
 import { Router } from '@angular/router';
 
@@ -15,18 +15,16 @@ export class StartComponent implements OnInit {
 
   constructor(
     private router: Router,
-    public myEventsService: MyEventsService,
+    public eventsService: EventsService,
     public createEventService: CreateEventService
   ) {}
 
-  ngOnInit() {
-    this.myEventsService.getMyEvents().subscribe();
-  }
+  ngOnInit() {}
 
   getCurrentEvent(id: string) {
-    this.myEventsService.getCurrentEvent(id).subscribe(() => {
-      console.log(this.myEventsService);
-      this.router.navigate(['/homepage']);
+    this.eventsService.getCurrentEvent(id).subscribe(() => {
+      console.log(this.eventsService);
+      this.router.navigate(['/homepage', id]);
     });
   }
 

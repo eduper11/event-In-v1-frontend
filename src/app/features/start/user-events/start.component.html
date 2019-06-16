@@ -29,8 +29,12 @@
       *ngIf="myEventsOpened"
     ></sn-myevents>
     <sn-create-event
-      class="col-12 col-lg-7 mt-4 animated bounceIn"
+      class="col-12 col-lg-7 mt-4 animated flipInX"
       *ngIf="createOpened"
     ></sn-create-event>
+    <sn-not-joined-events
+      class="col-12 col-lg-7 mt-4"
+      *ngIf="joinOpened"
+    ></sn-not-joined-events>
   </div>
 </div>

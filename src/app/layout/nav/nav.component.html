@@ -1,26 +1,41 @@
 <nav>
   <h3>
-    <a class="nav-link" routerLink="/homepage" routerLinkActive="text-primary"
-      >Event Homepage</a
+    <a
+      class="nav-link"
+      [routerLink]="['/homepage', eventService.currentEvent.id]"
+      routerLinkActive="text-primary"
+      >General View</a
     >
   </h3>
   <h3>
-    <a class="nav-link" routerLink="/members" routerLinkActive="text-primary"
-      >Event Members</a
+    <a
+      class="nav-link"
+      [routerLink]="['/members', eventService.currentEvent.id]"
+      routerLinkActive="text-primary"
+      >Members</a
     >
   </h3>
   <h3>
-    <a class="nav-link" routerLink="/live" routerLinkActive="text-primary"
+    <a
+      class="nav-link"
+      [routerLink]="['/live', eventService.currentEvent.id]"
+      routerLinkActive="text-primary"
       >Live Event</a
     >
   </h3>
   <h3>
-    <a class="nav-link" routerLink="/events" routerLinkActive="text-primary"
+    <a
+      class="nav-link"
+      [routerLink]="['/events']"
+      routerLinkActive="text-primary"
       >My Events</a
     >
   </h3>
   <h3>
-    <a class="nav-link" routerLink="/profile" routerLinkActive="text-primary"
+    <a
+      class="nav-link"
+      [routerLink]="['/profile']"
+      routerLinkActive="text-primary"
       >My profile</a
     >
   </h3>
