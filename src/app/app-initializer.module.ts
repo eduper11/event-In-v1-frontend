@@ -7,7 +7,7 @@ export function getInitialData(userService: UserService) {
       return new Promise(async resolve => {
         try {
           await userService.getUserProfile().toPromise();
-
+          console.log(userService.currentUser);
           return resolve();
         } catch (error) {
           return resolve(error);
