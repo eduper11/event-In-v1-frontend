@@ -24,14 +24,14 @@
         <button
           type="button"
           class="btn btn-info mx-1 my-1"
-          (click)="[joinEvent(event.id, 'speaker'), getCurrentEvent(event.id)]"
+          (click)="joinEvent(event.id, 'speaker')"
         >
           Join like SPEAKER!!
         </button>
         <button
           type="button"
           class="btn btn-info mx-1 my-1"
-          (click)="[joinEvent(event.id, 'listener'), getCurrentEvent(event.id)]"
+          (click)="joinEvent(event.id, 'listener')"
         >
           Join like LISTENER!!
         </button>

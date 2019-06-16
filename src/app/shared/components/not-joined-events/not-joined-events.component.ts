@@ -16,12 +16,13 @@ export class NotJoinedEventsComponent implements OnInit {
 
   joinEvent(id, rol) {
     this.eventsService.joinEvent(id, rol).subscribe();
+    this.getCurrentEvent(id);
   }
 
   getCurrentEvent(id: string) {
     this.eventsService.getCurrentEvent(id).subscribe(() => {
       console.log(this.eventsService);
-      this.router.navigate([`/homepage/:${id}`]);
+      this.router.navigate(['/homepage', id]);
     });
   }
 }
