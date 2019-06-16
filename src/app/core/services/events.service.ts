@@ -24,15 +24,13 @@ export class EventsService {
     });
   }
 
-  joinEvent(id: string, rol: string) {
-    return this.http
-      .post(`${environment.apiBaseUrl}/event/join`, {
-        params: {
-          event_id: id,
-          rol: rol
-        }
-      })
-      .pipe();
+  joinEvent(id, rol) {
+    return this.http.post(`${environment.apiBaseUrl}/event/join`, {
+      params: {
+        event_id: id,
+        rol
+      }
+    });
   }
 
   getEventsNotJoined() {
@@ -47,6 +45,7 @@ export class EventsService {
     return this.http.get(`${environment.apiBaseUrl}/myevents`).pipe(
       tap((events: Event[]) => {
         this.events = events;
+        console.log(this.events);
       })
     );
   }

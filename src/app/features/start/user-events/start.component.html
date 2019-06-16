@@ -24,10 +24,7 @@
   </div>
 
   <div class="row justify-content-center">
-    <sn-myevents
-      class="col-12 col-lg-7 mt-2"
-      *ngIf="myEventsOpened"
-    ></sn-myevents>
+    <sn-myevents class="col-12 mt-2" *ngIf="myEventsOpened"></sn-myevents>
     <sn-create-event
       class="col-12 col-lg-7 mt-4 animated flipInX"
       *ngIf="createOpened"
