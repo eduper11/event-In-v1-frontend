@@ -42,19 +42,19 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     children: [
       {
-        path: 'homepage',
+        path: 'homepage/:id',
         loadChildren: './features/home/home.module#HomeModule'
       },
       {
         path: 'events',
-        loadChildren: './features/events/events.module#EventsModule'
+        loadChildren: './features/start/start.module#StartModule'
       },
       {
-        path: 'live',
+        path: 'live/:id',
         loadChildren: './features/live/live.module#LiveModule'
       },
       {
-        path: 'members',
+        path: 'members/:id',
         loadChildren: './features/members/members.module#MembersModule'
       },
       {
