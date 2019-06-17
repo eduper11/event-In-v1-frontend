@@ -1,5 +1,5 @@
 <form
-  class="p-5"
+  class="px-4 bg-light h-100"
   [formGroup]="updateProfileForm"
   [snMarkAsTouched]="updateProfileForm"
   (ngSubmit)="updateProfile()"
@@ -17,59 +17,57 @@
     ></sn-validation-messages>
   </div>
 
-  <div formGroupName="preferences">
-    <div class="form-group">
-      <label>Description</label>
-      <textarea
-        class="form-control"
-        type="text"
-        rows="10"
-        formControlName="description"
-        placeholder="Tell us something about you"
-      ></textarea>
-      <sn-validation-messages
-        [control]="updateProfileForm.get('description')"
-      ></sn-validation-messages>
-    </div>
+  <div class="form-group">
+    <label>Description</label>
+    <textarea
+      class="form-control"
+      type="text"
+      rows="5"
+      formControlName="description"
+      placeholder="Tell us something about you"
+    ></textarea>
+    <sn-validation-messages
+      [control]="updateProfileForm.get('description')"
+    ></sn-validation-messages>
+  </div>
 
-    <div class="form-group">
-      <label>LinkedIn</label>
-      <input
-        class="form-control"
-        type="text"
-        formControlName="linkedIn"
-        placeholder="Enter your LinkedIn url"
-      />
-      <sn-validation-messages
-        [control]="updateProfileForm.get('linkedIn')"
-      ></sn-validation-messages>
-    </div>
+  <div class="form-group">
+    <label>LinkedIn</label>
+    <input
+      class="form-control"
+      type="text"
+      formControlName="linkedIn"
+      placeholder="Enter your LinkedIn url"
+    />
+    <sn-validation-messages
+      [control]="updateProfileForm.get('linkedIn')"
+    ></sn-validation-messages>
+  </div>
 
-    <div class="form-group">
-      <label>Twitter</label>
-      <input
-        class="form-control"
-        type="text"
-        formControlName="twitter"
-        placeholder="Enter your Twitter url"
-      />
-      <sn-validation-messages
-        [control]="updateProfileForm.get('twitter')"
-      ></sn-validation-messages>
-    </div>
+  <div class="form-group">
+    <label>Twitter</label>
+    <input
+      class="form-control"
+      type="text"
+      formControlName="twitter"
+      placeholder="Enter your Twitter url"
+    />
+    <sn-validation-messages
+      [control]="updateProfileForm.get('twitter')"
+    ></sn-validation-messages>
+  </div>
 
-    <div class="form-group">
-      <label>Github</label>
-      <input
-        class="form-control"
-        type="text"
-        formControlName="github"
-        placeholder="Enter your Github url"
-      />
-      <sn-validation-messages
-        [control]="updateProfileForm.get('preferences.github')"
-      ></sn-validation-messages>
-    </div>
+  <div class="form-group">
+    <label>Github</label>
+    <input
+      class="form-control"
+      type="text"
+      formControlName="github"
+      placeholder="Enter your Github url"
+    />
+    <sn-validation-messages
+      [control]="updateProfileForm.get('github')"
+    ></sn-validation-messages>
   </div>
   <button type="submit" class="btn btn-primary">Save</button>
 </form>

@@ -13,18 +13,19 @@ export class ProfileComponent implements OnInit {
     linkedIn: ['', [Validators.nullValidator]],
     twitter: ['', [Validators.nullValidator]],
     github: ['', [Validators.nullValidator]],
-    description: []
+    description: ['', [Validators.nullValidator]]
   });
 
   constructor(private fb: FormBuilder, private userService: UserService) {}
 
   ngOnInit() {
+    // this.userService.getUserProfile().subscribe();
     this.updateProfileForm.setValue({
-      fullName: this.userService.currentUser.full_name,
-      linkedIn: this.userService.currentUser.linkedin,
-      twitter: this.userService.currentUser.twitter,
-      github: this.userService.currentUser.github,
-      description: this.userService.currentUser.description
+      fullName: this.userService.currentUser[0].full_name,
+      linkedIn: this.userService.currentUser[0].linkedin,
+      twitter: this.userService.currentUser[0].twitter,
+      github: this.userService.currentUser[0].github,
+      description: this.userService.currentUser[0].description
     });
   }
 
