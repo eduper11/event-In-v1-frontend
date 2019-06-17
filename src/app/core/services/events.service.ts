@@ -15,7 +15,7 @@ export class EventsService {
 
   constructor(private http: HttpClient, private router: Router) {
     this.router.events.subscribe(event => {
-      console.log(event);
+      // console.log(event);
       if (event instanceof ActivationEnd) {
         if (event.snapshot && event.snapshot.params.id) {
           this.currentEvent['id'] = event.snapshot.params.id;
@@ -26,10 +26,8 @@ export class EventsService {
 
   joinEvent(id, rol) {
     return this.http.post(`${environment.apiBaseUrl}/event/join`, {
-      params: {
-        event_id: id,
-        rol
-      }
+      event_id: id,
+      rol
     });
   }
 
