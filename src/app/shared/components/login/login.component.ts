@@ -30,7 +30,7 @@ export class LoginComponent {
       this.authService.login(this.loginForm.value).subscribe(
         () => {
           // this.userService.getUserProfile().subscribe();
-          console.log(this.authService.login, this.userService);
+          // console.log(this.authService.login, this.userService);
           this.router.navigate(['/start']);
         },
         () => this.loginForm.get('password').setValue('')
