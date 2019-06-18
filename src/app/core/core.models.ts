@@ -23,12 +23,12 @@ export interface Error {
 
 export interface Event {
   id?: number;
-  name: string;
-  owner_uuid: string;
-  company: string;
-  created_at: Date;
-  finish_at: Date;
-  youtube_streaming_url: string;
+  name?: string;
+  owner_uuid?: string;
+  company?: string;
+  created_at?: Date;
+  finish_at?: Date;
+  youtube_streaming_url?: string;
 }
 
 export interface ToastData {
