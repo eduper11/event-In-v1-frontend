@@ -22,7 +22,7 @@ export interface Error {
 }
 
 export interface Event {
-  id: number;
+  id?: number;
   name: string;
   owner_uuid: string;
   company: string;
