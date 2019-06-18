@@ -3,7 +3,7 @@
     Here you can select one of your events...
   </h1>
 </section>
-<div class="row justify-content-center">
+<div class="row justify-content-center m-0">
   <div
     *ngIf="eventsService.events.length === 0"
     class="row justify-content-center"
@@ -16,11 +16,13 @@
     </h1>
   </div>
   <div
-    *ngIf="eventsService.events.length >= 1"
-    class="row justify-content-center"
+    *ngIf="eventsService.events.length > 0"
+    class="row justify-content-center m-0"
+    style="max-height: 550px; overflow: auto;"
   >
     <div
-      class="mb-3 col-12 col-lg-5"
+      class="mb-3 mx-3"
+      style="width: 27rem;"
       *ngFor="let event of eventsService.events"
     >
       <div class="card bg-light text-black animated flipInX border-primary">
