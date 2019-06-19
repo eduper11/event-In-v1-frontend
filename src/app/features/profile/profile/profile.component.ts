@@ -31,11 +31,6 @@ export class ProfileComponent implements OnInit {
 
   updateProfile() {
     if (this.updateProfileForm.valid) {
-      for (const prop of this.updateProfileForm.value.preferences) {
-        if (!this.updateProfileForm.value.preferences[prop]) {
-          this.updateProfileForm.value.preferences[prop] = '';
-        }
-      }
       this.userService.updateProfile(this.updateProfileForm.value).subscribe();
     }
   }
