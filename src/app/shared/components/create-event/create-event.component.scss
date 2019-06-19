@@ -10,3 +10,14 @@ p {
 h1 {
   font-size: 1.5rem;
 }
+
+#max-height {
+  max-height: 28rem;
+  overflow: auto;
+}
+
+@media (min-width: 768px) {
+  #max-height {
+    max-height: 34rem;
+  }
+}

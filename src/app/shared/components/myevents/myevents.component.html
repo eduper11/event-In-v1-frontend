@@ -26,7 +26,9 @@
             <p class="m-0">Company: {{ event.company }}</p>
           </li>
           <li>
-            <p class="m-0">Created at: {{ event.created_at }}</p>
+            <p class="m-0">
+              Created at: {{ event.created_at | date: 'fullDate' }}
+            </p>
           </li>
           <li>
             <p class="m-0">Finish at: {{ event.finish_at }}</p>
