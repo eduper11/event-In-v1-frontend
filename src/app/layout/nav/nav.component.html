@@ -1,42 +1,94 @@
 <nav>
-  <h3>
-    <a
-      class="nav-link"
-      [routerLink]="['/homepage', eventService.currentEvent.id]"
-      routerLinkActive="text-primary"
-      >General View</a
-    >
-  </h3>
-  <h3>
-    <a
-      class="nav-link"
-      [routerLink]="['/members', eventService.currentEvent.id]"
-      routerLinkActive="text-primary"
-      >Members</a
-    >
-  </h3>
-  <h3>
-    <a
-      class="nav-link"
-      [routerLink]="['/live', eventService.currentEvent.id]"
-      routerLinkActive="text-primary"
-      >Live Event</a
-    >
-  </h3>
-  <h3>
-    <a
-      class="nav-link"
-      [routerLink]="['/events']"
-      routerLinkActive="text-primary"
-      >My Events</a
-    >
-  </h3>
-  <h3>
-    <a
-      class="nav-link"
-      [routerLink]="['/profile']"
-      routerLinkActive="text-primary"
-      >My profile</a
-    >
-  </h3>
+  <ul class="p-0">
+    <li class="list-unstyled">
+      <a
+        class="nav-link"
+        [routerLink]="['/homepage', eventService.currentEvent.id]"
+        routerLinkActive="text-primary"
+        ><i
+          class="fas fa-home text-primary mr-1"
+          style="font-size: 1.5rem;"
+        ></i>
+        <span
+          class="ml-1"
+          style="font-family: 'Fredoka One'; ; font-size: 1.5rem;"
+          >General View</span
+        >
+      </a>
+    </li>
+    <li class="list-unstyled">
+      <a
+        class="nav-link"
+        [routerLink]="['/members', eventService.currentEvent.id]"
+        routerLinkActive="text-primary"
+        ><i
+          class="fas fa-users text-primary mr-1"
+          style="font-size: 1.5rem;"
+        ></i
+        ><span
+          class="ml-1"
+          style="font-family: 'Fredoka One'; ; font-size: 1.5rem"
+          >Members</span
+        ></a
+      >
+    </li>
+    <li class="list-unstyled">
+      <a
+        class="nav-link"
+        [routerLink]="['/live', eventService.currentEvent.id]"
+        routerLinkActive="text-primary"
+        ><i class="fas fa-tv text-primary mr-1" style="font-size: 1.5rem;"></i
+        ><span
+          class="ml-1"
+          style="font-family: 'Fredoka One'; ; font-size: 1.5rem"
+          >Live Event</span
+        ></a
+      >
+    </li>
+    <li class="list-unstyled">
+      <a
+        class="nav-link"
+        [routerLink]="['/events']"
+        routerLinkActive="text-primary"
+        ><i
+          class="fas fa-list-ul text-primary mr-1"
+          style="font-size: 1.5rem;"
+        ></i
+        ><span
+          class="ml-1"
+          style="font-family: 'Fredoka One'; ; font-size: 1.5rem"
+          >My Events</span
+        ></a
+      >
+    </li>
+    <li class="list-unstyled">
+      <a
+        class="nav-link"
+        [routerLink]="['/profile']"
+        routerLinkActive="text-primary"
+        ><i
+          class="fas fa-user-astronaut text-primary mr-1"
+          style="font-size: 1.5rem;"
+        ></i
+        ><span
+          class="ml-1"
+          style="font-family: 'Fredoka One'; ; font-size: 1.5rem"
+          >My profile</span
+        ></a
+      >
+    </li>
+    <li class="list-unstyled">
+      <a class="btn btn-link" (click)="authService.logout()"
+        ><i
+          class="fas fa-sign-out-alt text-primary mr-1"
+          style="font-size: 1.5rem;"
+        ></i
+        ><span
+          class="text-primary"
+          style="font-family: 'Fredoka One'; font-size: 1.5rem;"
+          >Logout</span
+        >
+      </a>
+    </li>
+  </ul>
 </nav>
