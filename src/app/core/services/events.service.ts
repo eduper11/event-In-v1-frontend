@@ -10,7 +10,7 @@ import { Event } from 'src/app/core/core.models';
 })
 export class EventsService {
   events: Event[];
-  currentEvent: Event | { id: number } = { id: 0 };
+  currentEvent: Event | { id } = { id: 0 };
   eventsNotJoined: Event[];
 
   constructor(private http: HttpClient, private router: Router) {
