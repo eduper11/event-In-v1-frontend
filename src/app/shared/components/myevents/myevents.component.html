@@ -1,55 +1,45 @@
-<section class="pt-3">
-  <h1 class="text-center pb-3">
+<section class="pt-2">
+  <h1 class="text-center pb-2">
     Here you can select one of your events...
   </h1>
 </section>
-<div class="row justify-content-center m-0">
-  <div
-    *ngIf="eventsService.events.length === 0"
-    class="row justify-content-center"
+<div
+  *ngIf="eventsService.events.length === 0"
+  class="row justify-content-center"
+>
+  <h1
+    class="col-12 col-md-7 text-center"
+    style="font-size: 2rem; font-family: 'Fredoka One'"
   >
-    <h1
-      class="col-12 col-md-7 text-center"
-      style="font-size: 2rem; font-family: 'Fredoka One'"
-    >
-      You don´t have joined to an event already. Join now!!
-    </h1>
-  </div>
-  <div
-    *ngIf="eventsService.events.length > 0"
-    class="row justify-content-center m-0"
-    style="max-height: 550px; overflow: auto;"
-  >
-    <div
-      class="mb-3 mx-3"
-      style="width: 27rem;"
-      *ngFor="let event of eventsService.events"
-    >
-      <div class="card bg-light text-black animated flipInX border-primary">
-        <div class="card-header p-2 bg-primary">
-          <h5 class="text-center">{{ event.name }}</h5>
-        </div>
-        <div class="card-body p-2">
-          <ul>
-            <li>
-              <p class="m-0">Company: {{ event.company }}</p>
-            </li>
-            <li>
-              <p class="m-0">Created at: {{ event.created_at }}</p>
-            </li>
-            <li>
-              <p class="m-0">Finish at: {{ event.finish_at }}</p>
-            </li>
-          </ul>
-          <div class="text-center">
-            <button
-              type="button"
-              class="btn btn-info"
-              (click)="getCurrentEvent(event.id)"
-            >
-              Go-In!!
-            </button>
-          </div>
+    You don´t have joined to an event already. Join now!!
+  </h1>
+</div>
+<div id="max-height" *ngIf="eventsService.events.length > 0">
+  <div class="mb-3 px-2" *ngFor="let event of eventsService.events">
+    <div class="card bg-light text-black animated flipInX border-primary">
+      <div class="card-header p-2 bg-primary">
+        <h5 class="text-center">{{ event.name }}</h5>
+      </div>
+      <div class="card-body p-2">
+        <ul>
+          <li>
+            <p class="m-0">Company: {{ event.company }}</p>
+          </li>
+          <li>
+            <p class="m-0">Created at: {{ event.created_at }}</p>
+          </li>
+          <li>
+            <p class="m-0">Finish at: {{ event.finish_at }}</p>
+          </li>
+        </ul>
+        <div class="text-center">
+          <button
+            type="button"
+            class="btn btn-info"
+            (click)="getCurrentEvent(event.id)"
+          >
+            Go-In!!
+          </button>
         </div>
       </div>
     </div>

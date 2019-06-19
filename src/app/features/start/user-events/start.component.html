@@ -2,38 +2,44 @@
   class="container-fluid bg-light h-100 p-0"
   style="max-height: -webkit-fill-available;"
 >
-  <div class="row justify-content-center py-2 mx-1">
+  <div class="row justify-content-center pb-2 pt-1 mx-1">
     <button
       type="button"
-      class="col-12 col-sm-2 col-lg-2 btn btn-primary my-1"
+      class="col-3 col-sm-2 col-lg-2 btn btn-primary my-1"
       (click)="[openMyEvents(), closeJoinEvent(), closeCreateEvent()]"
+      style="font-size:0.8rem;"
     >
       My events
     </button>
     <button
       type="button"
-      class="col-12 col-sm-2 col-lg-2 btn btn-primary mx-4 my-1"
+      class="col-3 col-sm-2 col-lg-2 btn btn-primary mx-4 my-1"
       (click)="[openJoinEvent(), closeCreateEvent(), closeMyEvents()]"
+      style="font-size:0.8rem;"
     >
       Join to a new event
     </button>
     <button
       type="button"
-      class="col-12 col-sm-2 col-lg-2 btn btn-primary my-1"
+      class="col-3 col-sm-2 col-lg-2 btn btn-primary my-1"
       (click)="[openCreateEvent(), closeJoinEvent(), closeMyEvents()]"
+      style="font-size:0.8rem;"
     >
       Create new event
     </button>
   </div>
 
   <div class="row justify-content-center m-0">
-    <sn-myevents class="col-12 mt-2 p-0" *ngIf="myEventsOpened"></sn-myevents>
+    <sn-myevents
+      class="col-12 col-md-7 mt-2 p-0"
+      *ngIf="myEventsOpened"
+    ></sn-myevents>
     <sn-create-event
-      class="col-12 col-lg-7 mt-4 animated flipInX"
+      class="col-12 col-md-7 mt-2 animated flipInX"
       *ngIf="createOpened"
     ></sn-create-event>
     <sn-not-joined-events
-      class="col-12 col-lg-7 mt-4"
+      class="col-12 col-md-7 mt-2 p-0"
       *ngIf="joinOpened"
     ></sn-not-joined-events>
   </div>

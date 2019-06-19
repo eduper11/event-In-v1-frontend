@@ -1,3 +1,14 @@
 h1 {
   font-size: 1rem;
 }
+
+#max-height {
+  max-height: 25rem;
+  overflow: auto;
+}
+
+@media (min-width: 768px) {
+  #max-height {
+    max-height: 32rem;
+  }
+}
