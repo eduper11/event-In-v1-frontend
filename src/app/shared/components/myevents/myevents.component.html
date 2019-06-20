@@ -31,7 +31,9 @@
             </p>
           </li>
           <li>
-            <p class="m-0">Finish at: {{ event.finish_at }}</p>
+            <p class="m-0">
+              Finish at: {{ event.finish_at | date: 'fullDate' }}
+            </p>
           </li>
         </ul>
         <div class="text-center">
