@@ -1,94 +1,58 @@
-<nav>
+<nav id="mySidenav" class="sidenav bg-dark">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
   <ul class="p-0">
     <li class="list-unstyled">
       <a
-        class="nav-link"
+        class="nav-link text-primary"
         [routerLink]="['/homepage', eventService.currentEvent.id]"
-        routerLinkActive="text-primary"
-        ><i
-          class="fas fa-home text-primary mr-1"
-          style="font-size: 1.5rem;"
-        ></i>
-        <span
-          class="ml-1"
-          style="font-family: 'Fredoka One'; ; font-size: 1.5rem;"
-          >General View</span
-        >
-      </a>
+        routerLinkActive="text-white"
+        (click)="closeNav()"
+        >General View</a
+      >
     </li>
     <li class="list-unstyled">
       <a
-        class="nav-link"
+        class="nav-link text-primary"
         [routerLink]="['/members', eventService.currentEvent.id]"
-        routerLinkActive="text-primary"
-        ><i
-          class="fas fa-users text-primary mr-1"
-          style="font-size: 1.5rem;"
-        ></i
-        ><span
-          class="ml-1"
-          style="font-family: 'Fredoka One'; ; font-size: 1.5rem"
-          >Members</span
-        ></a
+        routerLinkActive="text-white"
+        (click)="closeNav()"
+        >Members</a
       >
     </li>
     <li class="list-unstyled">
       <a
-        class="nav-link"
+        class="nav-link text-primary"
         [routerLink]="['/live', eventService.currentEvent.id]"
-        routerLinkActive="text-primary"
-        ><i class="fas fa-tv text-primary mr-1" style="font-size: 1.5rem;"></i
-        ><span
-          class="ml-1"
-          style="font-family: 'Fredoka One'; ; font-size: 1.5rem"
-          >Live Event</span
-        ></a
+        routerLinkActive="text-white"
+        (click)="closeNav()"
+        >Live Event</a
       >
     </li>
     <li class="list-unstyled">
       <a
-        class="nav-link"
+        class="nav-link text-primary"
         [routerLink]="['/events']"
-        routerLinkActive="text-primary"
-        ><i
-          class="fas fa-list-ul text-primary mr-1"
-          style="font-size: 1.5rem;"
-        ></i
-        ><span
-          class="ml-1"
-          style="font-family: 'Fredoka One'; ; font-size: 1.5rem"
-          >My Events</span
-        ></a
+        routerLinkActive="text-white"
+        (click)="closeNav()"
+        >My events</a
       >
     </li>
     <li class="list-unstyled">
       <a
-        class="nav-link"
+        class="nav-link text-primary"
         [routerLink]="['/profile']"
-        routerLinkActive="text-primary"
-        ><i
-          class="fas fa-user-astronaut text-primary mr-1"
-          style="font-size: 1.5rem;"
-        ></i
-        ><span
-          class="ml-1"
-          style="font-family: 'Fredoka One'; ; font-size: 1.5rem"
-          >My profile</span
-        ></a
+        routerLinkActive="text-white"
+        (click)="closeNav()"
+        >My profile</a
       >
     </li>
+    <hr />
     <li class="list-unstyled">
-      <a class="btn btn-link" (click)="authService.logout()"
-        ><i
-          class="fas fa-sign-out-alt text-primary mr-1"
-          style="font-size: 1.5rem;"
-        ></i
-        ><span
-          class="text-primary"
-          style="font-family: 'Fredoka One'; font-size: 1.5rem;"
-          >Logout</span
-        >
-      </a>
+      <a
+        class="nav-link text-primary"
+        (click)="[authService.logout(), closeNav()]"
+        >Logout</a
+      >
     </li>
   </ul>
 </nav>
