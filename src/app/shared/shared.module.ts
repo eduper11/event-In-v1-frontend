@@ -13,6 +13,7 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { ValidationEventComponent } from './components/validation-event/validation-event.component';
 import { MyEventsComponent } from './components/myevents/myevents.component';
 import { NotJoinedEventsComponent } from './components/not-joined-events/not-joined-events.component';
+import { ChangeAvatarComponent } from './components/change-avatar/change-avatar.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { NotJoinedEventsComponent } from './components/not-joined-events/not-joi
     LoaderComponent,
     ValidationEventComponent,
     MyEventsComponent,
-    NotJoinedEventsComponent
+    NotJoinedEventsComponent,
+    ChangeAvatarComponent
   ],
   imports: [CommonModule, ReactiveFormsModule],
   exports: [
@@ -40,7 +42,8 @@ import { NotJoinedEventsComponent } from './components/not-joined-events/not-joi
     MembersComponent,
     LiveComponent,
     MyEventsComponent,
-    NotJoinedEventsComponent
+    NotJoinedEventsComponent,
+    ChangeAvatarComponent
   ]
 })
 export class SharedModule {}
