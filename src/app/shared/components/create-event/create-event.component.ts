@@ -22,7 +22,7 @@ export class CreateEventComponent {
     name: ['', [Validators.required, Validators.minLength(3)]],
     company: ['', [Validators.required, Validators.minLength(3)]],
     finish_at: ['', [Validators.required]],
-    youtube_streaming_url: ['', [UrlValidator]]
+    streaming_url: ['', [UrlValidator]]
   });
 
   constructor(
@@ -37,13 +37,13 @@ export class CreateEventComponent {
       name,
       company,
       finish_at,
-      youtube_streaming_url
+      streaming_url
     } = this.createEventForm.value;
 
     if (this.createEventForm.valid) {
       console.log('2');
       this.createEventService
-        .createEvent({ name, company, finish_at, youtube_streaming_url })
+        .createEvent({ name, company, finish_at, streaming_url })
         .subscribe(() => {
           this.createEventForm.reset();
           this.modalService.open(
