@@ -28,7 +28,7 @@ export interface Event {
   company?: string;
   created_at?: Date;
   finish_at?: Date;
-  youtube_streaming_url?: string;
+  streaming_url?: string;
 }
 
 export interface ToastData {

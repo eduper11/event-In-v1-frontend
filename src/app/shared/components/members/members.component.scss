@@ -9,3 +9,20 @@ article {
   max-height: 3rem;
   overflow: auto;
 }
+
+@media (max-width: 768px) {
+  .card {
+    width: 15rem;
+  }
+}
+
+#max-height {
+  max-height: 25rem;
+  overflow: auto;
+}
+
+@media (min-width: 768px) {
+  #max-height {
+    max-height: 36rem;
+  }
+}
