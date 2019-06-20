@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EventsService } from 'src/app/core/services/events.service';
 
 @Component({
   selector: 'sn-live',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./live.component.scss']
 })
 export class LiveComponent implements OnInit {
-
-  constructor() { }
+  currentEvent;
+  constructor(public eventsService: EventsService) {}
 
   ngOnInit() {
+    this.eventsService
+      .getCurrentEvent(this.eventsService.currentEvent.id)
+      .subscribe();
   }
-
 }
