@@ -6,3 +6,9 @@
     height: 100vh;
   }
 }
+
+@media (min-width: 768px) {
+  #fill-available {
+    max-height: -webkit-fill-available;
+  }
+}
