@@ -1,45 +1,53 @@
-<div
-  class="card text-white bg-primary"
-  style="width: 18rem;"
-  *ngFor="let user of userService.currentEventUsers"
->
-  <div class="row justify-content-center py-1">
-    <img
-      src="{{ user.avatarUrl }}"
-      class="card-img-top border-primary rounded-circle"
-      width="160px"
-      height="auto"
-      alt="..."
-    />
-  </div>
-  <div class="card-body px-2 py-1">
-    <h1 class="card-title" style="font-size: 1.5rem;">{{ user.full_name }}</h1>
-    <h2 class="card-text" style="font-size: 0.8rem;">{{ user.description }}</h2>
-    <section class="row justify-content-center">
-      <a
-        href="https://www.linkedin.com"
-        title="https://www.linkedin.com"
-        class="btn btn-primary mx-2"
-        target="_blank"
-      >
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a
-        href="{{ user.github }}"
-        title="{{ user.github }}"
-        class="btn btn-primary mx-2"
-        target="_blank"
-      >
-        <i class="fab fa-github"></i>
-      </a>
-      <a
-        href="{{ user.instagram }}"
-        title="{{ user.instagram }}"
-        class="btn btn-primary mx-2"
-        target="_blank"
-      >
-        <i class="fab fa-instagram"></i>
-      </a>
-    </section>
+<div class="container-fluid p-0 m-0">
+  <div
+    class="card text-white bg-primary d-inline-block mx-2"
+    style="width: 18rem;"
+    *ngFor="let user of userService.currentEventUsers"
+  >
+    <div class="row justify-content-center py-1">
+      <img
+        src="{{ user.avatarUrl }}"
+        class="card-img-top border-primary rounded-circle"
+        width="160px"
+        height="auto"
+        alt="..."
+      />
+    </div>
+    <div class="card-body px-2 py-1">
+      <h1 class="card-title text-center" style="font-size: 1.5rem;">
+        {{ user.full_name }}
+      </h1>
+      <article class="text-dark">
+        <p class="card-text" style="font-size: 0.8rem;">
+          {{ user.description }}
+        </p>
+      </article>
+      <section class="row justify-content-center">
+        <a
+          href="https://www.linkedin.com"
+          title="https://www.linkedin.com"
+          class="btn btn-primary mx-2"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a
+          href="{{ user.github }}"
+          title="{{ user.github }}"
+          class="btn btn-primary mx-2"
+          target="_blank"
+        >
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="{{ user.instagram }}"
+          title="{{ user.instagram }}"
+          class="btn btn-primary mx-2"
+          target="_blank"
+        >
+          <i class="fab fa-instagram"></i>
+        </a>
+      </section>
+    </div>
   </div>
 </div>
