@@ -9,6 +9,7 @@ import { ModalComponent } from './modal/modal.component';
 import { GeneralLayoutComponent } from './general-layout/general-layout.component';
 import { MainLayoutComponent } from './main-layout/main-layout.component';
 import { NavComponent } from './nav/nav.component';
+import { HeaderMainComponent } from './header-main/header-main.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +19,16 @@ import { NavComponent } from './nav/nav.component';
     ModalComponent,
     GeneralLayoutComponent,
     MainLayoutComponent,
-    NavComponent
+    NavComponent,
+    HeaderMainComponent
   ],
   imports: [CommonModule, RouterModule, SharedModule],
-  exports: [ToastComponent, HeaderComponent, FooterComponent, ModalComponent]
+  exports: [
+    ToastComponent,
+    HeaderComponent,
+    FooterComponent,
+    ModalComponent,
+    HeaderMainComponent
+  ]
 })
 export class LayoutModule {}
