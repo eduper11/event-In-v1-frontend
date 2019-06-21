@@ -12,3 +12,9 @@ h1 {
     max-height: 32rem;
   }
 }
+
+@media (max-height: 736px) {
+  #max-height {
+    max-height: 32rem;
+  }
+}
