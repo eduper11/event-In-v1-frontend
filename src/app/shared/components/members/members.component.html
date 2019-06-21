@@ -8,7 +8,7 @@
   <div class="row justify-content-center pt-1 m-0" id="max-height">
     <div
       class="card text-white bg-primary d-inline-block m-2"
-      style="width: 18rem;"
+      style="width: 20rem;"
       *ngFor="let user of userService.currentEventUsers"
     >
       <div class="row justify-content-center py-1">
@@ -21,10 +21,14 @@
         />
       </div>
       <div class="card-body px-2 py-1">
-        <h1 class="card-title text-center" style="font-size: 1.5rem;">
+        <h1
+          class="card-title text-center mb-1 mt-0 mx-0"
+          style="font-size: 1.5rem;"
+        >
           {{ user.full_name }}
+          <p class="d-inline" style="font-size: 0.8rem">{{ user.rol }}</p>
         </h1>
-        <article class="text-dark">
+        <article class="text-dark px-2">
           <p class="card-text" style="font-size: 0.8rem;">
             {{ user.description }}
           </p>
@@ -33,7 +37,7 @@
           <a
             href="https://www.linkedin.com"
             title="https://www.linkedin.com"
-            class="btn btn-primary mx-2"
+            class="btn btn-primary mx-2 py-1"
             target="_blank"
           >
             <i class="fab fa-linkedin"></i>
@@ -41,7 +45,7 @@
           <a
             href="{{ user.github }}"
             title="{{ user.github }}"
-            class="btn btn-primary mx-2"
+            class="btn btn-primary mx-2 py-1"
             target="_blank"
           >
             <i class="fab fa-github"></i>
@@ -49,7 +53,7 @@
           <a
             href="{{ user.instagram }}"
             title="{{ user.instagram }}"
-            class="btn btn-primary mx-2"
+            class="btn btn-primary mx-2 py-1"
             target="_blank"
           >
             <i class="fab fa-instagram"></i>

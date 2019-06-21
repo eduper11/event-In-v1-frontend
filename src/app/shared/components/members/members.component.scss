@@ -10,19 +10,31 @@ article {
   overflow: auto;
 }
 
+#max-height {
+  max-height: 25rem;
+  overflow: auto;
+}
+
 @media (max-width: 768px) {
   .card {
     width: 15rem;
   }
 }
 
-#max-height {
-  max-height: 25rem;
-  overflow: auto;
+@media (min-height: 736px) {
+  #max-height {
+    max-height: 31rem;
+  }
 }
 
-@media (min-width: 768px) {
+@media (max-height: 736px) {
   #max-height {
     max-height: 36rem;
+  }
+}
+
+@media (max-height: 736px) and (min-width: 768) {
+  #max-height {
+    max-height: 32rem;
   }
 }
