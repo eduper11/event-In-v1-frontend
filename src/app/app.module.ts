@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
-import { AppInitializerModule } from './app-initializer.module';
+// import { AppInitializerModule } from './app-initializer.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,8 +17,8 @@ import { AppInitializerModule } from './app-initializer.module';
     CoreModule,
     SharedModule,
     LayoutModule,
-    BrowserAnimationsModule,
-    AppInitializerModule
+    BrowserAnimationsModule
+    // AppInitializerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
