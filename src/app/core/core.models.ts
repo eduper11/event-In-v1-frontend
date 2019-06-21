@@ -13,6 +13,7 @@ export interface User {
   twitter: string;
   instagram: string;
   description: string;
+  rol?: string;
 }
 
 export interface Error {
