@@ -17,6 +17,12 @@ p {
   }
 }
 
+@media (min-height: 800px) {
+  #max-height {
+    max-height: 36rem;
+  }
+}
+
 @media (min-height: 820px) {
   #max-height {
     max-height: 39rem;

@@ -27,3 +27,9 @@ h1 {
     max-height: 34rem;
   }
 }
+
+@media (min-height: 800px) {
+  #max-height {
+    max-height: 36rem;
+  }
+}
