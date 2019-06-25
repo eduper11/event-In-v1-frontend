@@ -7,14 +7,14 @@ h1 {
   overflow: auto;
 }
 
-@media (min-width: 768px) {
+@media (min-height: 736px) {
   #max-height {
     max-height: 32rem;
   }
 }
 
-@media (max-height: 736px) {
+@media (min-height: 820px) {
   #max-height {
-    max-height: 32rem;
+    max-height: 39rem;
   }
 }
