@@ -11,7 +11,7 @@ p {
   overflow: auto;
 }
 
-@media (min-height: 736px) {
+@media (max-height: 736px) {
   #max-height {
     max-height: 32rem;
   }
