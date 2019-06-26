@@ -27,6 +27,12 @@ article {
   }
 }
 
+@media (min-height: 800px) {
+  #max-height {
+    max-height: 40rem;
+  }
+}
+
 @media (max-height: 736px) {
   #max-height {
     max-height: 36rem;
