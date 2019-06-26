@@ -41,4 +41,14 @@ export class UserService {
       })
     );
   }
+
+  uploadAvatar(image: File) {
+    const formData = new FormData();
+
+    formData.append('avatar', image);
+
+    return this.http.post(`${environment.apiBaseUrl}/user/avatar`, formData, {
+      observe: 'response'
+    });
+  }
 }

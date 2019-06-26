@@ -1,0 +1,32 @@
+@import '~src/styles.scss';
+
+input {
+  display: none;
+}
+
+.image-upload-container {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-size: cover;
+  fa-icon {
+    font-size: 3rem;
+    color: $white;
+    position: absolute;
+    top: 20px;
+    left: 27px;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@media (min-width: 770px) {
+  .image-upload-container {
+    width: 15rem;
+    height: 15rem;
+  }
+}

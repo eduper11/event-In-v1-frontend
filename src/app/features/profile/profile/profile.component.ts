@@ -17,6 +17,8 @@ export class ProfileComponent implements OnInit {
     description: ['', [Validators.nullValidator]]
   });
 
+  profileImageUrl;
+
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
@@ -32,6 +34,7 @@ export class ProfileComponent implements OnInit {
         github: this.userService.currentUser[0].github,
         description: this.userService.currentUser[0].description
       });
+      this.profileImageUrl = this.userService.currentUser[0].avatarUrl;
     });
   }
 

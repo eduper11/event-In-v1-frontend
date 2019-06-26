@@ -1,3 +1,22 @@
-<p>
-  change-avatar works!
-</p>
+<div class="row justify-content-center m-0">
+  <label
+    class="image-upload-container"
+    [ngStyle]="{ 'background-image': imageUrl && 'url(' + imageUrl + ')' }"
+  >
+    <input
+      #imageInput
+      type="file"
+      accept="image/*"
+      (change)="processFile(imageInput)"
+    />
+    <i
+      *ngIf="selectedFile"
+      [ngClass]="getIcon()"
+      [style.color]="selectedFile?.status === 'fail' ? 'red' : 'white'"
+    ></i>
+    <!-- [spin]="selectedFile?.status !== 'ok' && selectedFile?.status !== 'fail'" -->
+  </label>
+  <h1 class="col-12 text-center p-0 m-0" style="font-size: 0.8rem;">
+    Click to change your avatar!
+  </h1>
+</div>
