@@ -12,7 +12,7 @@
     <i
       *ngIf="selectedFile"
       [ngClass]="getIcon()"
-      [style.color]="selectedFile?.status === 'fail' ? 'red' : 'white'"
+      [style.color]="selectedFile?.status === 'fail' ? 'red' : 'primary'"
     ></i>
     <!-- [spin]="selectedFile?.status !== 'ok' && selectedFile?.status !== 'fail'" -->
   </label>
