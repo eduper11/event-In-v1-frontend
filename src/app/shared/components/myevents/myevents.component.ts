@@ -17,7 +17,7 @@ export class MyEventsComponent implements OnInit {
   getCurrentEvent(id: string) {
     this.eventsService.getCurrentEvent(id).subscribe(() => {
       console.log(this.eventsService);
-      this.router.navigate(['/homepage', id]);
+      this.router.navigate(['/members', id]);
     });
   }
 }
